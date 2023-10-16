@@ -16,7 +16,8 @@ product_df = spark.read.option("header","true").option("delimiter",",").csv("s3:
 store_df = spark.read.option("header","true").option("delimiter",",").csv("s3://de-midterm-raw/store_2023-07-30.csv")
 calendar_df = spark.read.option("header","true").option("delimiter",",").csv("s3://de-midterm-raw/calendar_2023-07-30.csv")
 
-# Calculate the transformations metrics below by week, by store and by product:
+"""
+Calculate the transformations metrics below by week, by store and by product:
 	- Total sales quantity
 	- Total sales amount
 	- Average sales price
@@ -30,6 +31,7 @@ calendar_df = spark.read.option("header","true").option("delimiter",",").csv("s3
 	- Low Stock instances
 	- No Stock instances
 	- How many weeks the on hand stock can supply
+ """
 
 sales_df.createOrReplaceTempView("sales")
 inventory_df.createOrReplaceTempView("inventory")
