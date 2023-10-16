@@ -5,7 +5,7 @@ import sys
 date_str = sys.argv[1]
 
 
-# creating spark session
+# Create spark session
 spark = SparkSession.builder.master("yarn").appName("demo").getOrCreate()
 
 
@@ -91,7 +91,7 @@ GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13
 # Show transformations
 df_agg_transformations.show()
 
-# write the file back to s3
+# Write the file back to s3
 df_agg_transformations.repartition(1).write.mode("overwrite").option("compression","gzip").parquet(f"s3://midterm-data-result-b7/date={date_str}")
 
 
