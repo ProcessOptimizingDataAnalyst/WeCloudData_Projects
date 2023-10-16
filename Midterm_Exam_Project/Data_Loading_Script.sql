@@ -1,4 +1,4 @@
---data warehouse + database + schema creations
+--Data warehouse + database + schema creations
 
 CREATE OR REPLACE WAREHOUSE MIDTERM_WH with warehouse_size = 'X-SMALL' AUTO_SUSPEND = 60;
 USE WAREHOUSE MIDTERM_WH;
