@@ -1,0 +1,3 @@
+We will build a real-time application that collects GPS data, via an open API, streamed by IoT devices located on buses, by using Apache NiFi, CDC(Debezium), Kafka (MSK), Spark  Streaming, Docker, and MySQL.
+
+
