@@ -1,0 +1,1 @@
+In this project we will use a data pipeline architetcure built to ingest data from multiple files. In this architecture, we use Cloudwatch to schedule Lambda to scan the S3 bucket, and send a signal to Airflow when the lambda has judged that today’s  data is ready.
